@@ -2,13 +2,13 @@
 <RenoiseScriptingTool doc_version="0">
   <Name>GrooveTrack</Name>
   <Id>uk.tristanstrange.Groovetrack</Id>
-  <Version>1</Version>
+  <Version>0.1</Version>
   <ApiVersion>3</ApiVersion>
   <Author>Tristan Strange | tristan.strange@gmail.com</Author>
   <AutoUpgraded>false</AutoUpgraded>
   <Category>In Progress</Category>
-  <Description>Lock delay's and volume columns of tracks to other tracks.</Description>
-  <Homepage>http://tools.renoise.com</Homepage>
+  <Description>Lock delay's and volume columns of tracks to a "groove track".</Description>
+  <Homepage>http://github.com/triss/renoise_tools</Homepage>
   <Platform/>
   <Icon/>
 </RenoiseScriptingTool>
