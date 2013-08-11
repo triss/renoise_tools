@@ -1,11 +1,17 @@
 function sequencer_tracks_iter()
-  local rs = renoise.song()
-  
   local i = 0
   return function()
-    i = i + 1
-    if rs:track(i).type == renoise.Track.TRACK_TYPE_SEQUENCER then
-      return i, rs:track(i)  
-    end
+		local rs = renoise.song()
+		local track 
+
+		repeat 
+			i = i + 1
+			track = rs:track(i)
+		until track.type == renoise.Track.TRACK_TYPE_SEQUENCER 
+			or i > rs.sequencer_track_count
+
+		if track.type == renoise.Track.TRACK_TYPE_SEQUENCER then
+			return i, track
+		end
   end
 end
