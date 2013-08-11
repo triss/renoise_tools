@@ -3,6 +3,7 @@ main.lua
 ============================================================================]]--
 
 require 'edit_updater'
+require 'sequencer_tracks_iter'
 
 --------------------------------------------------------------------------------
 -- Main functions
@@ -97,7 +98,12 @@ end)
 function show_groove_column_mapping_dialog()
 	local rs = renoise.song()
 	local vb = renoise.ViewBuilder()
-	
+
+	local track_names = {}
+	for i, t in sequencer_tracks_iter() do 
+		track_names[i] = t.name
+	end
+
 	local groove_column_view = vb:column {
 		margin = 5,
 		spacing = 2,
@@ -115,12 +121,11 @@ function show_groove_column_mapping_dialog()
 		},
 		vb:row {
 			vb:text { text = "Track: ", width = 75 },
-			vb:valuebox { 
+			vb:popup { 
 				id = "track", value = groove_column.track, 
-				min = 1, max = #rs.tracks,
+				items = track_names,
 				notifier = function()
 					groove_column.track = vb.views.track.value
-					print(vb.views.pattern.value)
 				end
 			}
 		},
