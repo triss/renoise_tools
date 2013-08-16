@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RenoiseScriptingTool doc_version="0">
+  <Name>External FX Mapper</Name>
+  <Id>uk.tristanstrange.ExternalFxMapper</Id>
+  <Version>1</Version>
+  <ApiVersion>3</ApiVersion>
+  <Author>Tristan Strange | tristan.strange@gmail.com</Author>
+  <AutoUpgraded>false</AutoUpgraded>
+  <Category>In Progress</Category>
+  <Description>Compensates for an External FX tracks delay and maps external FX to and from tracks.</Description>
+  <Homepage>http://tools.renoise.com</Homepage>
+  <Platform/>
+  <Icon/>
+</RenoiseScriptingTool>
